@@ -20,7 +20,6 @@
 <h2 id="features">✨ Features</h2>
 <ul>
   <li>🔑 Authenticate users via RFID tags</li>
-  <li>🚪 Control door locks (solenoid or relay)</li>
   <li>📀 Log access events to Google Sheets</li>
   <li>📲 Receive SMS notifications (SIM800L)</li>
   <li>📟 Display feedback on 16x2 LCD (I2C)</li>
