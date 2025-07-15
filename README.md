@@ -5,23 +5,6 @@
 <h1>🔒 RFID Access Control System</h1>
 <p><span class="badge">Technology: RFID</span> <span class="badge">License: MIT</span></p>
 
-<h2>📑 Table of Contents</h2>
-<ul>
-  <li><a href="#overview">Overview</a></li>
-  <li><a href="#team">Team</a></li>
-  <li><a href="#features">Features</a></li>
-  <li><a href="#system-architecture">System Architecture</a></li>
-  <li><a href="#hardware-requirements">Hardware Requirements</a></li>
-  <li><a href="#software-requirements">Software Requirements</a></li>
-  <li><a href="#libraries-included">Libraries Included</a></li>
-  <li><a href="#installation">Installation</a></li>
-  <li><a href="#usage">Usage</a></li>
-  <li><a href="#configuration">Configuration</a></li>
-  <li><a href="#contributing">Contributing</a></li>
-  <li><a href="#license">License</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
-
 <h2 id="overview">📌 Overview</h2>
 <p>This project implements an <strong>RFID-based access control system</strong> using an ESP8266 and RFID reader modules. It allows authorized users to unlock doors or access secure areas by scanning RFID tags/cards.</p>
 
