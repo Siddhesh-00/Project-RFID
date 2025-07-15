@@ -12,10 +12,11 @@
 <ul>
   <li><strong>Team Name:</strong> Team Pioneer</li>
   <li><strong>Lead:</strong> Siddhesh Godage</li>
-  <li><strong>Electronics:</strong> Siddhesh Godage, Aveek Ganguly</li>
   <li><strong>Programming:</strong> Om Joshi, Siddhesh Godage</li>
-   <li><strong>Designed by:</strong> Avinash Malusare, Shubham Jaiswal</li></ul>
-
+  <li><strong>Electronics:</strong> Aveek Ganguly, Siddhesh Godage</li>
+  <li><strong>Designed by:</strong> Avinash Malusare, Shubham Jaiswal</li>
+  <li><strong>This Repo Created By:</strong> Siddhesh Bhole</li></ul>
+    
 <h2 id="features">✨ Features</h2>
 <ul>
   <li>🔑 Authenticate users via RFID tags</li>
