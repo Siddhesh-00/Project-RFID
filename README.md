@@ -1,80 +1,65 @@
-# 🔒 RFID Access Control System
+# 🔒 RFID Access Control System (Google Sheets Edition)
+![Technology: RFID](https://img.shields.io/badge/Technology-RFID-blue) ![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
-  
+This repository contains the firmware and setup instructions for an RFID access control system that uses **Google Sheets** as its backend database. This method is easy to set up and is ideal for small-scale projects, demonstrations, or personal use.
 
-## 📌 Overview
+---
 
-This master repository is the central hub for an RFID-based access control system built with the ESP8266. It provides two distinct data logging implementations (Google Sheets and Firebase), allowing authorized users to gain access by scanning registered RFID tags/cards.
+## ✨ Features
+* 🔑 Authenticate users via RFID tags against a Google Sheet.
+* 📝 Log all access attempts directly into the spreadsheet.
+* 📲 Receive SMS notifications upon successful scan (using SIM800L).
+* 📟 Display user feedback on a 16x2 I2C LCD.
+* 🔔 Provide audible feedback with a Piezo buzzer.
 
------
-
-## 👨‍💻 Team
-
-  * **Team Name:** Team Pioneer
-  * **Lead:** Siddhesh Godage
-  * **Programming:** Om Joshi, Siddhesh Godage
-  * **Electronics:** Aveek Ganguly, Siddhesh Godage
-  * **Designed by:** Avinash Malusare, Shubham Jaiswal
-  * **Repository & Documentation:** Siddhesh Bhole
-
------
-
-## ✨ Core Features
-
-  * 🔑 Authenticate users via RFID tags.
-  * 📲 Receive SMS notifications upon successful scan (using SIM800L).
-  * 📟 Display user feedback on a 16x2 I2C LCD.
-  * 🔔 Provide audible feedback with a Piezo buzzer.
-  * 💾 **Choose between two powerful backends for data logging.**
-
------
+---
 
 ## 🔩 Hardware & 🔌 Connections
-
-The core hardware is consistent across both versions of the project.
+The following hardware is required for this project.
 
 #### Required Components:
+* PN532 RFID module
+* ESP8266 board (NodeMCU or similar)
+* Piezo buzzer
+* LCD 16x2 with I2C module
+* SIM800L GSM Module
 
-  * PN532 RFID module
-  * ESP8266 board (NodeMCU)
-  * Piezo buzzer
-  * LCD 16x2 with I2C module
-  * SIM800L GSM Module
+➡️ For detailed instructions on how to wire the components together, please refer to our comprehensive **[Wiring Diagram](https://github.com/YOUR_USERNAME/YOUR_REPO/wiki/Wiring-Diagram)**.
 
-➡️ For detailed instructions on how to wire the components together, please refer to our comprehensive **[Wiring Diagram](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO/wiki/Wiring-Diagram)**.
+---
 
------
+## 💻 Software & Setup
+To get the system running, you'll need to set up Google Sheets, create a Google Apps Script, and configure the Arduino code.
 
-## 💾 Data Logging Methods
+### 1. Google Sheet Setup
+1.  Create a new Google Sheet.
+2.  Set up two tabs: one named `students` and another named `attendance_logs`.
+3.  The `students` sheet should have columns like: `uid`, `name`, `dept`, `year`, `roll_no`, `parent_number`.
+4.  The `attendance_logs` sheet should have columns like: `timestamp`, `uid`, `name`, `roll_no`.
 
-Choose the method that best fits the scale and technical requirements of your project.
+### 2. Google Apps Script
+1.  In your Google Sheet, go to **Extensions > Apps Script**.
+2.  Download the `google-apps-script.gs` file from the [**Releases Page**](https://github.com/YOUR_USERNAME/YOUR_REPO/releases) and paste its content into the script editor.
+3.  Deploy the script as a **Web app**.
+4.  Set access to **"Anyone"** (or "Anyone, even anonymous").
+5.  Copy the generated **Web app URL**. You will need this for the Arduino code.
 
-### Method 1: Google Sheets (Easy Integration)
+### 3. Arduino IDE
+1.  Install the required libraries: `ESP8266WiFi`, `ESP8266HTTPClient`, `LiquidCrystal_I2C`, `PN532`, and `ArduinoJson`.
+2.  Download the latest source code `.zip` from the project's [**Releases Page**](https://github.com/YOUR_USERNAME/YOUR_REPO/releases).
+3.  Unzip the file and open the `.ino` sketch in the Arduino IDE.
+4.  Update the placeholder values for your WiFi SSID, password, and the Google Apps Script URL you copied earlier.
+5.  Upload the code to your ESP8266.
 
-Uses Google Sheets as a lightweight database. Perfect for getting started quickly or for smaller-scale projects.
+---
 
-  * **Pros:** Easy setup, no cost, data is easily viewable.
-  * **Cons:** Higher latency, not ideal for real-time updates.
-  * **Best for:** Small-scale operations, personal projects, or quick demos.
+## 🚀 Usage
+Once the hardware is assembled and the code is uploaded, the system is ready to use. Tap a registered RFID card on the PN532 reader. The system will verify the UID against the Google Sheet, log the attendance, and send an SMS notification.
 
-➡️ [**View the Google Sheets Version Repository**](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/RFID-System-Google-Sheets)
-
-### Method 2: Firebase (Fast & Scalable)
-
-Integrates with Google's Firebase Realtime Database, offering a professional, scalable, and low-latency solution.
-
-  * **Pros:** Extremely fast, highly scalable, robust security.
-  * **Cons:** Moderately more complex setup.
-  * **Best for:** Larger-scale deployments or projects requiring instant data logging.
-
-➡️ [**View the Firebase Version Repository**](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/RFID-System-Firebase)
-
------
+---
 
 ## 🤝 Contributing
-
-Feel free to fork this master repo or any of the specific implementation repos. Bug reports and pull requests are always welcome\!
+Contributions, issues, and feature requests are welcome. Feel free to fork the repo and submit a pull request.
 
 ## 📄 License
-
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
