@@ -1,5 +1,5 @@
 # 🔒 RFID Access Control System
-![Technology: RFID](https://img.shields.io/badge/Technology-RFID-blue) ![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
+[![Technology: RFID](https://img.shields.io/badge/Technology-RFID-blue)](https://www.gs1.org/standards/epc-rfid) [![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-green)](https://www.espressif.com/en/products/socs/esp8266) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
   
 
 ## 📌 Overview
