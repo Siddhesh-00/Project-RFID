@@ -1,5 +1,4 @@
 # 🔒 RFID Access Control System (Google Sheets Edition)
-![Technology: RFID](https://img.shields.io/badge/Technology-RFID-blue) ![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 This repository contains the firmware and setup instructions for an RFID access control system that uses **Google Sheets** as its backend database. This method is easy to set up and is ideal for small-scale projects, demonstrations, or personal use.
 
@@ -51,15 +50,3 @@ To get the system running, you'll need to set up Google Sheets, create a Google 
 4.  Update the placeholder values for your WiFi SSID, password, and the Google Apps Script URL you copied earlier.
 5.  Upload the code to your ESP8266.
 
----
-
-## 🚀 Usage
-Once the hardware is assembled and the code is uploaded, the system is ready to use. Tap a registered RFID card on the PN532 reader. The system will verify the UID against the Google Sheet, log the attendance, and send an SMS notification.
-
----
-
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome. Feel free to fork the repo and submit a pull request.
-
-## 📄 License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
