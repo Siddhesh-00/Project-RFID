@@ -1,80 +1,55 @@
-# 🔒 RFID Access Control System
+# 🔒 RFID Access Control System (Firebase Edition)
+![Technology: RFID](https://img.shields.io/badge/Technology-RFID-blue) ![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
-  
+This repository contains the firmware and setup instructions for a high-performance RFID access control system that uses **Firebase Realtime Database** as its backend. This method provides a fast, scalable, and low-latency solution suitable for larger projects or applications requiring real-time data synchronization.
 
-## 📌 Overview
+---
 
-This master repository is the central hub for an RFID-based access control system built with the ESP8266. It provides two distinct data logging implementations (Google Sheets and Firebase), allowing authorized users to gain access by scanning registered RFID tags/cards.
+## ✨ Features
+* 🔑 Authenticate users via RFID tags against a secure Firebase database.
+* ⚡ Log access events in **real-time**.
+* 📲 Receive SMS notifications upon successful scan (using SIM800L).
+* 📟 Display user feedback on a 16x2 I2C LCD.
+* 🔔 Provide audible feedback with a Piezo buzzer.
 
------
-
-## 👨‍💻 Team
-
-  * **Team Name:** Team Pioneer
-  * **Lead:** Siddhesh Godage
-  * **Programming:** Om Joshi, Siddhesh Godage
-  * **Electronics:** Aveek Ganguly, Siddhesh Godage
-  * **Designed by:** Avinash Malusare, Shubham Jaiswal
-  * **Repository & Documentation:** Siddhesh Bhole
-
------
-
-## ✨ Core Features
-
-  * 🔑 Authenticate users via RFID tags.
-  * 📲 Receive SMS notifications upon successful scan (using SIM800L).
-  * 📟 Display user feedback on a 16x2 I2C LCD.
-  * 🔔 Provide audible feedback with a Piezo buzzer.
-  * 💾 **Choose between two powerful backends for data logging.**
-
------
+---
 
 ## 🔩 Hardware & 🔌 Connections
-
-The core hardware is consistent across both versions of the project.
+The following hardware is required for this project.
 
 #### Required Components:
+* PN532 RFID module
+* ESP8266 board (NodeMCU or similar)
+* Piezo buzzer
+* LCD 16x2 with I2C module
+* SIM800L GSM Module
 
-  * PN532 RFID module
-  * ESP8266 board (NodeMCU)
-  * Piezo buzzer
-  * LCD 16x2 with I2C module
-  * SIM800L GSM Module
+➡️ For detailed instructions on how to wire the components together, please refer to our comprehensive **[Wiring Diagram](https://github.com/YOUR_USERNAME/YOUR_REPO/wiki/Wiring-Diagram)**.
 
-➡️ For detailed instructions on how to wire the components together, please refer to our comprehensive **[Wiring Diagram](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO/wiki/Wiring-Diagram)**.
+---
 
------
+## 💻 Software & Setup
+To get the system running, you'll need to set up a Firebase project and configure the Arduino code.
 
-## 💾 Data Logging Methods
+### 1. Firebase Project Setup
+1.  Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
+2.  In the project dashboard, go to **Build > Realtime Database**. Create a new database, starting in **test mode** for now.
+3.  Go to **Build > Authentication**. Click "Get started" and enable the **Email/Password** sign-in provider.
+4.  In the Authentication "Users" tab, add a new user for your device (e.g., `device@example.com` with a strong password).
+5.  Go to **Project Settings** (gear icon) and copy your **Web API Key** and **Database URL**.
 
-Choose the method that best fits the scale and technical requirements of your project.
-
-### Method 1: Google Sheets (Easy Integration)
-
-Uses Google Sheets as a lightweight database. Perfect for getting started quickly or for smaller-scale projects.
-
-  * **Pros:** Easy setup, no cost, data is easily viewable.
-  * **Cons:** Higher latency, not ideal for real-time updates.
-  * **Best for:** Small-scale operations, personal projects, or quick demos.
-
-➡️ [**View the Google Sheets Version Repository**](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/RFID-System-Google-Sheets)
-
-### Method 2: Firebase (Fast & Scalable)
-
-Integrates with Google's Firebase Realtime Database, offering a professional, scalable, and low-latency solution.
-
-  * **Pros:** Extremely fast, highly scalable, robust security.
-  * **Cons:** Moderately more complex setup.
-  * **Best for:** Larger-scale deployments or projects requiring instant data logging.
-
-➡️ [**View the Firebase Version Repository**](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/RFID-System-Firebase)
-
------
-
-## 🤝 Contributing
-
-Feel free to fork this master repo or any of the specific implementation repos. Bug reports and pull requests are always welcome\!
-
-## 📄 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+### 2. Database Structure
+In the Realtime Database, you will need to structure your data. A recommended structure is:
+```json
+{
+  "students": {
+    "YOUR_CARD_UID_1": {
+      "name": "John Doe",
+      "dept": "Engineering",
+      "roll": "E101",
+      "year": "4",
+      "parent_number": "+1234567890"
+    }
+  },
+  "attendance_logs": {}
+}
