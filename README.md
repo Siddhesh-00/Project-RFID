@@ -57,7 +57,7 @@ Uses Google Sheets as a lightweight database. Perfect for getting started quickl
   * **Cons:** Higher latency, not ideal for real-time updates.
   * **Best for:** Small-scale operations, personal projects, or quick demos.
 
-➡️ [**View the Google Sheets Version Repository**](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/RFID-System-Google-Sheets)
+➡️ [**View the Google Sheets Version Repository**](https://github.com/Siddhesh-00/Project-RFID/tree/GoogleSheets-Editon?tab=readme-ov-file)
 
 ### Method 2: Firebase (Fast & Scalable)
 
