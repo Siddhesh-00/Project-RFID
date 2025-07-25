@@ -14,7 +14,7 @@ This master repository is the central hub for an RFID-based access control syste
   * **Lead:** Siddhesh Godage
   * **Programming:** Om Joshi, Siddhesh Godage
   * **Electronics:** Aveek Ganguly, Siddhesh Godage
-  * **Designed by:** Avinash Malusare, Shubham Jaiswal
+  * **Designs of Outer Body:** Avinash Malusare, Shubham Jaiswal
   * **Repository & Documentation:** Siddhesh Bhole, Avinash Malusare, Shubham Jaiswal
 
 -----
