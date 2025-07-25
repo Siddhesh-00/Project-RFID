@@ -1,5 +1,4 @@
 # 🔒 RFID Access Control System (Firebase Edition)
-![Technology: RFID](https://img.shields.io/badge/Technology-RFID-blue) ![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 This repository contains the firmware and setup instructions for a high-performance RFID access control system that uses **Firebase Realtime Database** as its backend. This method provides a fast, scalable, and low-latency solution suitable for larger projects or applications requiring real-time data synchronization.
 
