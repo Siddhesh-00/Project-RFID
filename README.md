@@ -67,7 +67,7 @@ Integrates with Google's Firebase Realtime Database, offering a professional, sc
   * **Cons:** Moderately more complex setup.
   * **Best for:** Larger-scale deployments or projects requiring instant data logging.
 
-➡️ [**View the Firebase Version Repository**](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/RFID-System-Firebase)
+➡️ [**View the Firebase Version Repository**](https://github.com/Siddhesh-00/Project-RFID/tree/Firebase-Edition?tab=readme-ov-file)
 
 -----
 
